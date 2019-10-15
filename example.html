@@ -1,0 +1,31 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
+    <script src="furigana.js"></script>
+    <link href="furigana.css" rel="stylesheet" />
+
+    <div id="editorjs"></div>
+
+    <script>
+        const editor = new EditorJS({
+            autofocus: true,
+            tools: {
+                furigana: Furigana,
+                header: {
+                    class: Header,
+                    inlineToolbar: true
+                },
+                list: {
+                    class: List,
+                    inlineToolbar: true,
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
